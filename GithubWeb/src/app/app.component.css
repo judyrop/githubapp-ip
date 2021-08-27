@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    background-color:greenyellow;
+ border: solid;
+ background-origin: border-box;
+}
+p{
+    border: 0;
+    
+}
+*{
+    background-origin: border-box;
+    border:box-sizing;
+}
