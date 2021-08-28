@@ -18,13 +18,13 @@ export class GithubComponent implements OnInit {
 
   ngOnInit() {
     interface ApiResponse{
-  name:string;
+  login:string;
       repos_url:string;
     }
 
     this.http.get<ApiResponse>("https://docs.github.com/en/rest/reference/users").subscribe(data=>{
       // Succesful API request
-      this.data = new Data(data.name, data.repos_url)
+      this.data = new Data(data.login, data.repos_url)
     })
   }
   
