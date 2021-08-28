@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Github } from '../github';
+import { Data } from '../data-class/data';
+import { DataService } from '../data-service/data.service';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-github',
@@ -7,10 +10,24 @@ import { Github } from '../github';
   styleUrls: ['./github.component.css']
 })
 export class GithubComponent implements OnInit {
- 
-  constructor() { }
-
-  ngOnInit(): void {
+  dataService: DataService = new DataService;
+  data!: Data;
+  constructor(dataService:DataService, private http :HttpClient) { 
+    this.data=new DataService.getData()
   }
 
+  ngOnInit() {
+    interface ApiResponse{
+  name:string;
+      repos_url:string;
+    }
+
+    this.http.get<ApiResponse>("https://docs.github.com/en/rest/reference/users").subscribe(data=>{
+      // Succesful API request
+      this.data = new Data(data.name, data.repos_url)
+    })
+  }
+  
+  
 }
+

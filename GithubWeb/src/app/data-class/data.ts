@@ -1,3 +1,3 @@
 export class Data {
-    constructor(public username:string, public repository:string ){}
+    constructor(public name:string, public repos_url:string ){}
 }
