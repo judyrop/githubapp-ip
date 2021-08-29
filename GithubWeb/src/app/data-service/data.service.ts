@@ -6,12 +6,9 @@ import { Data } from '../data-class/data';
   providedIn: 'root'
 })
 export class DataService {
-  private username:string;
-  private clientkey :"";
-  static getData: any;
+
   
 
-  constructor(private http :HttpClient) {
-    this.data = new Data('string',"");
+  constructor() {
    }
 }

@@ -11,21 +11,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GithubComponent implements OnInit {
   
-  data!: Data;
-  constructor(dataService:DataService, private http :HttpClient) { 
-    this.data=new DataService.getData()
+   constructor() { 
+  
   }
 
   ngOnInit() {
-    interface ApiResponse{
-  login:string;
-      repos_url:string;
-    }
-
-    this.http.get<ApiResponse>("https://docs.github.com/en/rest/reference/users").subscribe(data=>{
-      // Succesful API request
-      this.data = new Data(data.login, ApiResponse.repos_url)
-    })
   }
   
   
