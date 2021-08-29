@@ -11,6 +11,7 @@ export class GithubComponent implements OnInit {
   user:any;
   showProfile:any;
   repos:any;
+  repodetails:any;
   showUserName(){
     this.service.showUser(this.user).subscribe(profile => {
       console.log(profile)
@@ -18,7 +19,7 @@ export class GithubComponent implements OnInit {
     });
   }
   getRepository(){
-    this.service.getProfileRepos(this.repos).subscribe(data=>{
+    this.service.getProfileRepos(this.user).subscribe(data=>{
       console.log("greetings" + data)
       return this.repos = data;
     });

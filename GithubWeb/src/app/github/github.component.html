@@ -9,10 +9,11 @@
         <input (click)="showUserName()" (click)="getRepository()" type="submit" value="Submit" class="btn btn-primary btn-sm" >
     </div><br>
 </form>
-<div class="panel-body">
+<div class="panel-body" *ngIf="showProfile.name">
     <div class="row">
         <div  class="col-md-3">
             <img src="{{showProfile.avatar_url}}" class="img-circle img responsive" width="80%"   alt="profile image">
+        
         </div>
         <div class="col-md-5">
             <ul class="list-group">
@@ -22,9 +23,18 @@
               <li class="list-group-item" *ngIf="showProfile.email"><a href="emailto:{{showProfile.email}}">{{showProfile.email}}</a></li>
 
             </ul>
+            <div class="span">
+                    <p>
+                        <span class="label label-default">{{showProfile.followers}} Followers</span><br>
+                        <span class="label label-primary">Following {{showProfile.following}}</span><br>
+                        <span class="label label-info">{{showProfile.public_gists}}Public_gists</span><br>
+                        <span class="label label-success">{{showProfile.public_repos}}Public_repos</span><br>
+                      </p>
+                      <p><a href="https://github.com/{{showProfile.login}}" target="_blank" class="btn btn-success btn-sm">View Profile on Github</a></p>
+                </div>
         </div>
         <div class="col-md-4">
-            <div class="span">
+            <!-- <div class="span">
                 <p>
                     <span class="label label-default">{{showProfile.followers}} Followers</span><br>
                     <span class="label label-primary">Following {{showProfile.following}}</span><br>
@@ -32,7 +42,15 @@
                     <span class="label label-success">{{showProfile.public_repos}}Public_repos</span><br>
                   </p>
                   <p><a href="https://github.com/{{showProfile.login}}" target="_blank" class="btn btn-success btn-sm">View Profile on Github</a></p>
-            </div>
+            </div> -->
+
+            <ul>
+                <li *ngFor="let repo of repos">
+                        <a href="{{repo.name}}">{{repo.name}}</a>
+                        <p float-right>{{repo.description}}</p>
+                        <p> {{repo.forks}}</p>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
@@ -47,8 +65,4 @@
          <div class="panel-body" *ngFor="let repo of repos"></div> 
     </div> -->
     <!-- repo part -->
-    <div class="row">
-      <div *ngFor="let repo of repos">
-          <p>Name:{{repo.name}}</p>
-      </div>
-    </div>
+    <!--  -->
