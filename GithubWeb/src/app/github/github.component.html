@@ -5,15 +5,15 @@
     <div class="text-center">
         <input [(ngModel)]="user"  name="user" type="search" class="form-control" placeholder="Input name" id="searchArea">
     </div>
-    {{showProfile.login}}
+    {{showProfile}}
     <div>
         <input (click)="showUserName()" type="submit" value="Submit" class="btn btn-primary btn-sm" >
     </div>
 </form>
 <div class="panel-body">
     <div class="row">
-        <div col-md-3>
-            <img src="{{showProfile.avatar_url}}" class="img-circle img responsive"  alt="profile image">
+        <div  class="col-md-3">
+            <img src="{{showProfile.avatar_url}}" class="img-circle img responsive" width="70%"   alt="profile image">
         </div>
         <div class="col-md-5">
             <ul class="list-group">
@@ -27,13 +27,27 @@
         <div class="col-md-4">
             <div class="span">
                 <p>
-                    <span class="label label-default">{{showProfile.followers}}Followers</span>
-                    <span class="label label-primary">Following {{showProfile.following}}</span>
-                    <span class="label label-info">{{showProfile.public_gists}}Public_gists</span>
-                    <span class="label label-success">{{showProfile.public_repos}}Public_repos</span>
+                    <span class="label label-default">{{showProfile.followers}} Followers</span><br>
+                    <span class="label label-primary">Following {{showProfile.following}}</span><br>
+                    <span class="label label-info">{{showProfile.public_gists}}Public_gists</span><br>
+                    <span class="label label-success">{{showProfile.public_repos}}Public_repos</span><br>
                   </p>
-                  <p><a href="{{showProfile.html_url" target="_blank" class="btn btn-success btn-sm">View Profile on Github</a></p>
+                  <p><a href="https://github.com/{{showProfile.login}}" target="_blank" class="btn btn-success btn-sm">View Profile on Github</a></p>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+<!-- <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Repos</h3>
+        </div>
+         <div class="panel-body" *ngFor="let repo of repos"></div> 
+    </div> -->
+    <!-- repo part -->
+    <div class="row">
+      
+    </div>

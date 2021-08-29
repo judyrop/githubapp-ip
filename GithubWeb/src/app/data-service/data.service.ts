@@ -7,11 +7,15 @@ import { Data } from '../data-class/data';
   providedIn: 'root'
 })
 export class DataService {
-users :any;
-name:any;
+users:any;
+Username:any;
 constructor( private http:HttpClient) { }
   showUser(user:any){
-    return this.http.get("https://api.github.com/users/" + user+ "?access_token=" + environment.apiUrl)
+    return this.http.get("https://api.github.com/users/" + user + "?access_token=" + environment.apiUrl)
+    .pipe(((response:any)=>response));
+  }
+  getProfileRepos(repo:any){
+    return this.http.get("https://api.github.com/users/" + repo + "/repos?access_token=" + environment.apiUrl)
     .pipe(((response:any)=>response));
   }
   // private username:string;
