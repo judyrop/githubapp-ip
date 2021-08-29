@@ -10,7 +10,7 @@ import { DataService } from '../data-service/data.service';
 export class GithubComponent implements OnInit {
   user:any;
   showProfile:any;
-  repolink:any;
+  repos:any;
   showUserName(){
     this.service.showUser(this.user).subscribe(profile => {
       console.log(profile)
@@ -18,9 +18,9 @@ export class GithubComponent implements OnInit {
     });
   }
   getRepository(){
-    this.service.getProfileRepos(this.repolink).subscribe(data=>{
+    this.service.getProfileRepos(this.repos).subscribe(data=>{
       console.log("greetings" + data)
-      return this.repolink = data;
+      return this.repos = data;
     });
   }
   constructor( private service:DataService ) {  }

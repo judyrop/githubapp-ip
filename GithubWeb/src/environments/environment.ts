@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   apiUrl:"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",
-  githubUrl:"https://api.github.com/users/"
+  githubUrl:"https://api.github.com/users/",
+  connector:"/repos"
 };
 
 /*

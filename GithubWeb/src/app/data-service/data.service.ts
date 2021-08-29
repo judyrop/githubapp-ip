@@ -5,24 +5,16 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class DataService {
-// users:any;
-// Username:any;
+users:any;
+Username:any;
 constructor( private http:HttpClient) { }
   showUser(user:any){
     return this.http.get("https://api.github.com/users/" + user + "?access_token=" + environment.apiUrl)
     .pipe(((response:any)=>response));
   }
   getProfileRepos(repolink:any){
-    return this.http.get(environment.githubUrl + repolink + "/repos?access_token=" + environment.apiUrl)
+    return this.http.get(environment.githubUrl + repolink + environment.connector + "?access_token=" + environment.apiUrl)
     .pipe(((response:any)=>response));
   }
-  // private username:string;
-  // private id:"47379472" | undefined;
-  // constructor(private http:HttpClient) {
-  //   console.log("service is ready");
-  //   this.username = 'judyrop';
-  //  }
-  //  getProfileInfo(){
-  //    return this.http.get("https://api.github.com/users/" +this.username +"?id=" + this.id);
-  //  }
+  
 }
