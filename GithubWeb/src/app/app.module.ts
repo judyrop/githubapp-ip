@@ -7,6 +7,7 @@ import { GithubComponent } from './github/github.component';
 import { SearchComponent } from './search/search.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DataService } from './data-service/data.service';
 
 @NgModule({
   declarations: [
@@ -14,14 +15,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     GithubComponent,
     SearchComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

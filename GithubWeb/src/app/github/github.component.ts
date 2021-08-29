@@ -11,7 +11,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GithubComponent implements OnInit {
   
-   constructor() { 
+   constructor(private dataService:DataService) {
+     this.dataService.getProfileInfo().subscribe(data=>(
+       console.log(data)
+     )) ;
   
   }
 
