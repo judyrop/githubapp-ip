@@ -1,3 +1,3 @@
 export class Data {
-    constructor(public login:string, public repos_url:string ){}
+    constructor(private username:string, private clientkey:""){}
 }
