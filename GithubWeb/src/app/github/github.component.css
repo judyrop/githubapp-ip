@@ -21,6 +21,7 @@ h1{
     padding: 8px 16px;
 }
 *{
+    font-style: normal;
     padding: 0;
 }
 .repo{
