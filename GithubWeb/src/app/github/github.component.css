@@ -12,3 +12,14 @@ h1{
 .list-group{
     background-color: powderblue;
 }
+.input-form{
+    width: 80;
+    padding: 8px 16px;
+}
+.submit{
+    
+    padding: 8px 16px;
+}
+*{
+    padding: 0;
+}

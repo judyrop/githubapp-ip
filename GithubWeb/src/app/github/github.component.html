@@ -2,10 +2,10 @@
 
 <!-- <app-search></app-search> -->
 <form class="form-inline" submit="searchUser">
-    <div class="text-center">
-        <input [(ngModel)]="user"  name="user" type="search" class="form-control" placeholder="Input name" id="searchArea">
+    <div class="input-form">
+        <input [(ngModel)]="user" (keyup)="showUserName()" name="user" type="search" class="form-control" placeholder="Input name" id="searchArea">
     </div>
-    <div>
+    <div class="submit">
         <input (click)="showUserName()" (click)="getRepository()" type="submit" value="Submit" class="btn btn-primary btn-sm" >
     </div><br>
 </form>
@@ -48,5 +48,7 @@
     </div> -->
     <!-- repo part -->
     <div class="row">
-      
+      <div *ngFor="let repolinks of repolink">
+          <p>Name:{{repolink.name}}</p>
+      </div>
     </div>

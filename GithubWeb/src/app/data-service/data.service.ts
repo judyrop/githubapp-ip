@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { Data } from '../data-class/data';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +13,7 @@ constructor( private http:HttpClient) { }
     .pipe(((response:any)=>response));
   }
   getProfileRepos(repolink:any){
-    return this.http.get("https://api.github.com/users/" + repolink + "/repos?access_token=" + environment.apiUrl)
+    return this.http.get(environment.githubUrl + repolink + "/repos?access_token=" + environment.apiUrl)
     .pipe(((response:any)=>response));
   }
   // private username:string;
