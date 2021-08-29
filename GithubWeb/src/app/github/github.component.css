@@ -21,7 +21,7 @@ h1{
     padding: 8px 16px;
 }
 *{
-    font-style: normal;
+    font-family:'Times New Roman', Times, serif;
     padding: 0;
 }
 .repo{
