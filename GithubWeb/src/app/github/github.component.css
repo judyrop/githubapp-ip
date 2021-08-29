@@ -4,3 +4,11 @@ h1{
  
  background-origin: border-box;
 }
+.span{
+    background-color:plum;
+    max-width: 300px;
+    text-align: center;
+}
+.list-group{
+    background-color: powderblue;
+}
