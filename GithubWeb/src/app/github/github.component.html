@@ -5,9 +5,8 @@
     <div class="text-center">
         <input [(ngModel)]="user"  name="user" type="search" class="form-control" placeholder="Input name" id="searchArea">
     </div>
-    {{showProfile}}
     <div>
-        <input (click)="showUserName()" type="submit" value="Submit" class="btn btn-primary btn-sm" >
+        <input (click)="showUserName()" (click)="getRepository()" type="submit" value="Submit" class="btn btn-primary btn-sm" >
     </div>
 </form>
 <div class="panel-body">
