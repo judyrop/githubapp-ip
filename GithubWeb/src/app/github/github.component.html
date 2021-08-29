@@ -17,6 +17,7 @@
         </div>
         <div class="col-md-5">
             <ul class="list-group">
+              <li class="list-group-item" *ngIf="showProfile.name"> {{showProfile.name}}</li>
               <li class="list-group-item" *ngIf="showProfile.bio"> {{showProfile.bio}}</li>
               <li class="list-group-item" *ngIf="showProfile.blog"><a href="{{showProfile.blog}}" target="_blank">{{showProfile.blog}}</a></li>
               <li class="list-group-item" *ngIf="showProfile.email"><a href="emailto:{{showProfile.email}}">{{showProfile.email}}</a></li>
@@ -24,13 +25,14 @@
             </ul>
         </div>
         <div class="col-md-4">
-            <div>
+            <div class="span">
                 <p>
                     <span class="label label-default">{{showProfile.followers}}Followers</span>
-                    <span class="label label-default">Following {{showProfile.following}}</span>
-                    <span class="label label-default">{{showProfile.public_gists}}Public_gists</span>
-                    <span class="label label-default">{{showProfile.public_repos}}Public_repos</span>
+                    <span class="label label-primary">Following {{showProfile.following}}</span>
+                    <span class="label label-info">{{showProfile.public_gists}}Public_gists</span>
+                    <span class="label label-success">{{showProfile.public_repos}}Public_repos</span>
                   </p>
+                  <p><a href="{{showProfile.html_url" target="_blank" class="btn btn-success btn-sm">View Profile on Github</a></p>
             </div>
         </div>
     </div>
