@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Data } from '../data-class/data';
-import { DataService } from '../data-service/data.service';
-import { HttpClient } from '@angular/common/http';
 
+import { DataService } from '../data-service/data.service';
 
 @Component({
   selector: 'app-github',
@@ -10,13 +8,18 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./github.component.css']
 })
 export class GithubComponent implements OnInit {
-  
-   constructor(private dataService:DataService) {
-     this.dataService.getProfileInfo().subscribe(data=>(
-       console.log(data)
-     )) ;
-  
+  user:any;
+  showProfile:any;
+  showUserName(){
+    this.service.showUser(this.user).subscribe(profile => {
+      console.log(profile)
+      return this.showProfile = profile;
+    });
   }
+  constructor( private service:DataService ) {  }
+   
+
+  
 
   ngOnInit() {
   }
