@@ -1,27 +1,23 @@
-# GithubWeb
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Project Name
+Github-app
+# Date and Development Team
+29th August 2021
+The System was developed by Chepkemoi Rop
+## Description
+The application is created using angular version 11. The application has the capability of showing the name of the person using github app, the person's repositories,followers,forks and how many the user is following.It also shows the links of the user's pages.
+## Settup and Installation process
+Make sure you have node,npm, tsc and watchman installed in your computer or desktop.
+A user can also clone this project from the link github link: judyrop
+## Known bugs
+For the time being,the styling are not very much appealing as expected.
+## Support and Contact Details
+Phone number: 0722887764
+Email:judyrop@student.moringaschool.com
+## Technologies Used
+Angular
+Typescript
+HTML
+CSS
+## License
+This  application is licensed under MIT License.
+Copyright (c) 2021
