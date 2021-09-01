@@ -1,0 +1,21 @@
+<!-- <div class="search">
+    <h2>Input Username</h2>
+    <input type="text" placeholder="Input Username">
+</div> -->
+<header class="pt-3">
+    <div class="search text-center">
+        <img src="../../assets/business-2082639_1280.jpg" alt="" class="img-fluid searchImage">
+    </div>
+    <div>
+        <P class="searchText text-center">Github Search</P>
+    </div>
+</header>
+<form class="form-inline" submit="searchUser">
+    <div class="text-center">
+        <input [(ngModel)]="user"  name="user" type="search" class="form-control" placeholder="Search" id="searchArea">
+    </div>
+    {{displayUser.login}}
+    <div>
+        <input (click)="showUserName()" type="submit" value="search" class="btn btn-seondary btn-sm" >
+    </div>
+</form>
