@@ -12,9 +12,9 @@ constructor( private http:HttpClient) { }
     return this.http.get("https://api.github.com/users/" + user + "?access_token=" + environment.apiUrl)
     .pipe(((response:any)=>response));
   }
-  getProfileRepos(repolink:any){
-    return this.http.get(environment.githubUrl + repolink + environment.connector + "?access_token=" + environment.apiUrl)
+  getProfileRepos(user:any){
+    return this.http.get("https://api.github.com/users/"+ user + "/repos?access_token=" + environment.apiUrl)
     .pipe(((response:any)=>response));
   }
-  
+  // .get("https://api.github.com/users/"+ user + "/repos?access_token=" + environment.apiUrl)
 }
