@@ -37,14 +37,14 @@
                       <p><a href="https://github.com/{{showProfile.login}}" target="_blank" class="btn btn-success btn-sm">View Profile on Github</a></p>
                 </div>
         </div>
-        <div class="col-md-4"> 
+        <div class="col-md-4 bg-secondary"> 
             <ul class="repo">
                 <h4 class="btn btn-info">Repositories</h4>
                 <li *ngFor="let repo of repos">
-                        <a href="{{repo.name}}">{{repo.name}}</a>
+                        <a href="{{repo.name}}"><strong>{{repo.name}}</strong></a>
                         <p>{{repo.description}}</p>
                         <p>{{repo.forks}}</p>
-                        
+                        <p>{{repo.updated_at|dateCount}}</p>
                 </li>
             </ul>
         </div>
