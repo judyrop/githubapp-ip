@@ -3,3 +3,10 @@
     text-decoration: none;
     text-transform: capitalize;
 }
+.form-inline{
+    margin-top: 16px;
+        margin-left:20% ;
+}
+input{
+    width: 60%;
+}

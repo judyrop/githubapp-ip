@@ -2,15 +2,15 @@
 <div class="container">
     <title>GITHUB PAGES</title>
     <div class="row">
- <div class="col-md-5">
+ <div >
     <!-- <img src="GithubWeb/gtlogo.png" alt="home logo"> -->
-<form class="form-inline" submit="searchUser">
+<form class="form-inline justify-content-centre" submit="searchUser">
     <div class="input-form">
         <!-- (keyup)="showUserName()" -->
         <input [(ngModel)]="user" name="user" type="search" class="form-control" placeholder="Input name" id="searchArea">
     </div>
-    <div class="submit">
-        <input (click)="showUserName()" (click)="getRepository()" type="submit" value="Submit" class="btn btn-primary btn-sm" >
+    <div class="submit" >
+        <button (click)="showUserName()" (click)="getRepository()" type="submit" value="Submit" class="btn btn-primary btn-sm" >Submit</button>
     </div><br>
 </form>
 </div>
@@ -39,8 +39,8 @@
                 </div>
         </div>
         <div class="col-md-4 bg-secondary"> 
-            <ul class="repo">
-                <h4 class="btn btn-info">Repositories</h4>
+            <ul class="repo"  *ngIf="showProfile.name">
+                <h4 class="btn btn-info" (click)="getRepository()">Repositories</h4>
                 <li *ngFor="let repo of repos">
                         <a href="{{repo.name}}"><strong>{{repo.name}}</strong></a>
                         <p>{{repo.description}}</p>

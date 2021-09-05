@@ -31,6 +31,8 @@ export class GithubFormComponent implements OnInit {
   constructor(private service:DataService ) { }
 
   ngOnInit(): void {
+    this.user = "judyrop";
+    this.showUserName()
   }
 
 }
