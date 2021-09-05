@@ -1,6 +1,7 @@
-<h1>Github Pages</h1>
-
-<!-- <app-search></app-search> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
 <form class="form-inline" submit="searchUser">
     <div class="input-form">
         <input [(ngModel)]="user" (keyup)="showUserName()" name="user" type="search" class="form-control" placeholder="Input name" id="searchArea">
@@ -9,8 +10,9 @@
         <input (click)="showUserName()" (click)="getRepository()" type="submit" value="Submit" class="btn btn-primary btn-sm" >
     </div><br>
 </form>
-<div class="panel-body" *ngIf="showProfile.name">
-    <div class="row">
+</div>
+</div>
+ <div class="row" *ngIf="showProfile.name">
         <div  class="col-md-3">
             <img src="{{showProfile.avatar_url}}" class="img-circle img responsive" width="80%"   alt="profile image">
         
@@ -33,24 +35,14 @@
                       <p><a href="https://github.com/{{showProfile.login}}" target="_blank" class="btn btn-success btn-sm">View Profile on Github</a></p>
                 </div>
         </div>
-        <div class="col-md-4">
-            <!-- <div class="span">
-                <p>
-                    <span class="label label-default">{{showProfile.followers}} Followers</span><br>
-                    <span class="label label-primary">Following {{showProfile.following}}</span><br>
-                    <span class="label label-info">{{showProfile.public_gists}}Public_gists</span><br>
-                    <span class="label label-success">{{showProfile.public_repos}}Public_repos</span><br>
-                  </p>
-                  <p><a href="https://github.com/{{showProfile.login}}" target="_blank" class="btn btn-success btn-sm">View Profile on Github</a></p>
-            </div> -->
-
+        <div class="col-md-4"> 
             <ul class="repo">
                 <h4 class="btn btn-info">Repositories</h4>
                 <li *ngFor="let repo of repos">
                         <a href="{{repo.name}}">{{repo.name}}</a>
                         <p>{{repo.description}}</p>
                         <p>{{repo.forks}}</p>
-                        <!-- <div class="col-6"></div> -->
+                        
                 </li>
             </ul>
         </div>
