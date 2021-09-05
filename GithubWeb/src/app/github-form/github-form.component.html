@@ -6,7 +6,8 @@
     <!-- <img src="GithubWeb/gtlogo.png" alt="home logo"> -->
 <form class="form-inline" submit="searchUser">
     <div class="input-form">
-        <input [(ngModel)]="user" (keyup)="showUserName()" name="user" type="search" class="form-control" placeholder="Input name" id="searchArea">
+        <!-- (keyup)="showUserName()" -->
+        <input [(ngModel)]="user" name="user" type="search" class="form-control" placeholder="Input name" id="searchArea">
     </div>
     <div class="submit">
         <input (click)="showUserName()" (click)="getRepository()" type="submit" value="Submit" class="btn btn-primary btn-sm" >
