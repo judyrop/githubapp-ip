@@ -4,6 +4,8 @@ import { AboutComponent } from './about/about.component';
 import { GithubFormComponent } from './github-form/github-form.component';
 
 const routes: Routes = [
+
+{ path: '', redirectTo:"/github", pathMatch:"full"},
   { path: 'github', component:GithubFormComponent},
   { path: 'about', component: AboutComponent},
 ];

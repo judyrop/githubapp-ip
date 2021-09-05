@@ -10,3 +10,9 @@
 input{
     width: 60%;
 }
+.logo{
+    width: 400px;
+    height: 200px;
+   margin-left: 20%;
+   margin-top: 10px;
+}
